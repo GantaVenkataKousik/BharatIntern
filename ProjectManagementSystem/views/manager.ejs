@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To-Do-List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Golos+Text:wght@400;600&family=Lobster&family=Noto+Sans:wght@200;300;400;500&family=Poppins:wght@100;400&family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/manager.css">
+</head>
+
+<body onload="initClock()">
+    <div class="to-do-list">
+        <div class="header-main">
+            <div class="img">
+                <h2>GVK</h2>
+            </div>
+            <ul class="nav-bar">
+                <a href="/home"><li><h2>Home</h2></li></a>
+                <a href="/tasksassigned"><li><h2>AssignedTo</h2></li></a>
+                <a href="/inprogress"><li><h2>Inprogress</h2></li></a>
+                <a href="/completed"><li><h2>Completed</h2></li></a>
+            </ul>
+        </div>
+        <form action="/addtask" method="post">
+          <div class="up">
+              <header>
+                  <div class="heading">
+                      <h2>Manager</h2>
+                  </div>
+                  <div class="input">
+                      <div class="task">
+                          <label for="input">Enter task:</label>
+                          <br>
+                          <input type="text" name="task" id="task" placeholder="What you have planned?...." minlength="5" maxlength="500" class="input">    
+                      </div>
+                      <div class="description">
+                          <label for="input">Enter task Description:</label>
+                          <br>
+                          <textarea name="description" cols="30" rows="10" placeholder="place your description...."></textarea>
+                      </div>
+                      <div class="assignto">
+                          <label for="input">Assign to:</label>
+                          <br>
+                          <input type="text" name="email" placeholder="Enter person mail" minlength="5" maxlength="500" class="input"> 
+                      </div>
+                      <button class="btn">AddTask</button>
+                  </div>
+                  
+              </header>
+          </div>
+      </form>
+
+    </div>
+    <section>
+      <div class="date-time">
+          <div class="date">
+              <span id="day">Day</span>,
+              <span id="month">Month</span>
+              <span id="datenum">00</span>,
+              <span id="year">year</span>
+          </div>
+          <div class="time-status">
+              <span id="hour">00</span>:
+              <span id="min">00</span>:
+              <span id="sec">00</span>
+              <span id="fore-noon">AM</span>
+          </div>
+      </div>
+  </section>
+
+  <footer>
+      <div class="copyright">
+          <p>&copy;copyright | <a href="https://www.linkedin.com/in/venkatakousik/"><b>Venkata Kousik</a></b> | 2023</p>
+      </div>
+  </footer>
+
+    
+  <script src="/manager.js"></script>
+</body>
+
+</html>

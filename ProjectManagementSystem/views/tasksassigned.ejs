@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To-Do-List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Golos+Text:wght@400;600&family=Lobster&family=Noto+Sans:wght@200;300;400;500&family=Poppins:wght@100;400&family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/tasksassigned.css">
+</head>
+
+<body onload="initClock()">
+    <header>
+        <h2><%= data.heading %></h2>
+    </header>
+    <div class="to-do-list">
+        <div class="up">
+            <% data.t.forEach(function(task) { %>
+                <div class="box">
+                    <div class="icon-email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                        </svg>
+                        <div class="email">
+                            <%= task.email %>
+                        </div>
+                    </div>
+                    <div class="task">
+                        Task : <%= task.task %>
+                    </div>
+                    <div class="description">
+                        
+                        <% const descriptionWords = task.description.split(' '); %>
+                        <%= descriptionWords.slice(0, 10).join(' ') + (descriptionWords.length > 13 ? ' ...' : '') %>
+                    </div>
+                </div>
+                <% }); %>
+
+            
+        </div>
+    </div>
+
+
+    <div class="loading">
+        <p id="num"></p>
+        <div class="circle"></div>
+    </div>
+    <script src="/manager.js"></script>
+</body>
+
+</html>

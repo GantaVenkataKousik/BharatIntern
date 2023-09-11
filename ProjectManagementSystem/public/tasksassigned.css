@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Golos Text', sans-serif;
+    font-family: 'Lobster', cursive;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    font-size: 1em;
+    color: #fff;
+    position: relative;
+    height: auto;
+    background: #1A5F7A;
+}
+
+
+.to-do-list {
+    padding: 0%;
+    height: 100vh;
+}
+
+
+.complete {
+    margin: 3% 0 0 0;
+    width: 50%;
+    border-right: 2px dotted #159895;
+    min-height: 60vh;
+    height: auto;
+}
+
+.complete:last-child {
+    border: none;
+}
+
+.complete h2 {
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.list {
+    margin-left: 10%;
+}
+
+.completed-li {
+    background: #57C5B6;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 2%;
+    right: 50%;
+    transform: translateX(50%);
+}
+.up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+.copyright a {
+    text-decoration: none;
+    color: #57C5B6;
+}
+
+.completed-list {
+    width: 90%;
+    margin-left: 10%;
+}
+
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+
+section{
+    position: absolute;
+    bottom: 12%;
+    right: 3%;
+    width: 20vw;
+
+}
+
+
+footer{
+    font-size: 1.1em;
+}
+
+textarea {
+    overflow-y: hidden; /* Hide the vertical scrollbar */
+    white-space: pre-wrap; /* Allow text to wrap */
+  }
+
+#task:-webkit-autofill {
+    background-color: transparent !important;
+  }
+
+.box{
+    background: #57C5B6;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;
+    width: 350px;
+    height: 150px;
+}
+
+.icon-email{
+    display: flex;
+    align-items: center;
+}
+.box div{
+    margin: 4px;
+}
+.email{
+    margin-left: 5px;
+}
+
+header h2{
+    text-align: center;
+    margin-top: 2vh;
+    font-size: 2em;
+    margin-left: 2vw;
+}
+
+
+.to-do-list{
+    display:flex;
+    justify-content: center;
+    height: auto;
+}
+.up {
+    margin-top: 10vh;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: 350px 350px;
+    grid-template-rows: repeat(auto-fill, 100px); 
+    grid-column-gap: 50px;
+    grid-row-gap:100px
+}
+
+
+
+
+
+
+
